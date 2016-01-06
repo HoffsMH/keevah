@@ -24,6 +24,7 @@ gem "populator"
 gem 'less-rails', github: 'metaskills/less-rails', branch: 'master'
 
 gem 'will_paginate'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem "pry-rails"

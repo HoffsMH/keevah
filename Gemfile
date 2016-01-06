@@ -23,6 +23,8 @@ gem "rails_12factor", group: :production
 gem "populator"
 gem 'less-rails', github: 'metaskills/less-rails', branch: 'master'
 
+gem 'will_paginate'
+
 group :development, :test do
   gem "pry-rails"
   gem "awesome_print"

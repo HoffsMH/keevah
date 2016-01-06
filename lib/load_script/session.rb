@@ -25,6 +25,7 @@ module LoadScript
 
     def run
       while true
+        puts "request made..."
         run_action(actions.sample)
       end
     end

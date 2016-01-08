@@ -58,10 +58,16 @@ module LoadScript
       session.fill_in("password", with: pw)
       session.click_link_or_button("Login")
     end
+    # def browse_loan_requests
+    #   session.visit "#{host}/browse"
+    #   session.all(".lr-about").sample.click
+    # end
 
     def browse_loan_requests
+      random_loan_request = [*1..501000].sample
+
       session.visit "#{host}/browse"
-      session.all(".lr-about").sample.click
+      session.visit "#{host}/loan_requests/#{random_loan_request}"
     end
 
     def log_out

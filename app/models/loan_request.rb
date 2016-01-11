@@ -81,6 +81,10 @@ class LoanRequest < ActiveRecord::Base
   end
 
   def related_projects
-    (categories.flat_map(&:loan_requests) - [self]).shuffle.take(4)
+    @categories ||= categories
+    @categories.map do |category|
+      offset = 34
+      category.loan_requests.offset(offset).limit(1)
+    end.flatten
   end
 end
